@@ -6,11 +6,11 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 19:14:28 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/17 19:17:10 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/17 19:20:36 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);
