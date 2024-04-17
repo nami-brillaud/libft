@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 17:37:14 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/17 17:26:49 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/17 18:44:00 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char		*s_ptr;
-	size_t				i;
+	const unsigned char		*s_ptr;
+	unsigned char			uc;
+	size_t					i;
 
-	s_ptr = s;
+	s_ptr = (const unsigned char *)s;
+	uc = (unsigned char)c;
 	i = 0;
 	while (i < n)
 	{
-		if (*s_ptr == c)
+		if (*s_ptr == uc)
 		{
 			return ((void *)s_ptr);
 		}
@@ -34,6 +36,22 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
+// #include <string.h>
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main()
+// {
+// 	// s = "libft-test-tokyo\0\0\0acdfg\0\0\0\0\0"
+// 	char *s = calloc(30, sizeof(char));
+// 	memcpy(s, "libft-test-tokyo", 17);
+// 	memcpy(s + 20, "acdfg", 5);
+
+// 	// char overflow
+// 	printf("ft ver %s\n",ft_memchr(s, 'l' + 256, 30));
+// 	printf("real ver %s\n",memchr(s, 'l' + 256, 30));
+// 	return (0);
+// }
 // #include <string.h>
 // #include <stdio.h>
 // int main(void)
