@@ -6,30 +6,39 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:37:16 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/18 16:29:04 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/18 17:21:28 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+size_t	ft_strlen(const char *s)
+{
+	size_t	count;
+
+	count = 0;
+	while (*s++)
+		count++;
+	return (count);
+}
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
+	size_t	srcsize;
 	size_t	i;
 
-	i = 1;
-	while (i < dstsize && *src)
+	srcsize = ft_strlen(src);
+	if (!dstsize)
+		return (srcsize);
+	i = 0;
+	while (i < (dstsize - 1) && *src)
 	{
 		*dst++ = *src++;
 		i++;
 	}
 	*dst = '\0';
-	if (*src++)
-	{
-		i++;
-	}
-	return (i);
+	return (srcsize);
 }
-
 // #include <stdio.h>
 // int main(void)
 // {
