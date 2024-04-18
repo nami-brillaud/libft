@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:04:38 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/18 16:30:12 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/18 18:09:00 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 typedef struct s_list
 {
