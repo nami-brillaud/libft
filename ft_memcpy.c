@@ -6,13 +6,13 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:09:04 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/17 17:10:42 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/18 16:03:53 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	char	*dst_ptr;
 	char	*src_ptr;
