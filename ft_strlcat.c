@@ -6,14 +6,14 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:29:39 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/18 18:08:14 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/18 19:25:53 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
-{
+static size_t	strlen(const char *s)
+{	
 	size_t	count;
 
 	count = 0;
@@ -24,23 +24,26 @@ size_t	ft_strlen(const char *s)
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	totalsize;
+	size_t	dstlen;
+	size_t	srclen;
+	size_t	maxcopy;
 	size_t	i;
-	size_t	j;
 
-	totalsize = ft_strlen(src) + ft_strlen(dst);
-	if (!dstsize)
-		return (totalsize);
-	i = ft_strlen(dst);
-	j = 0;
-	while (j < (dstsize - 1) && *src)
+	if (dst == (void *)0)
+		return (strlen(src));
+	dstlen = strlen(dst);
+	srclen = strlen(src);
+	if (dstlen >= dstsize)
+		return (dstsize + srclen);
+	maxcopy = dstsize - (dstlen + 1);
+	i = 0;
+	while (i < maxcopy && *src)
 	{
-		dst[i] = src[j];
+		dst[dstlen + i] = src[i];
 		i++;
-		j++;
 	}
-	dst[i] = '\0';
-	return (totalsize);
+	dst[dstlen + i] = '\0';
+	return (dstlen + srclen);
 }
 
 // #include <stdio.h>
