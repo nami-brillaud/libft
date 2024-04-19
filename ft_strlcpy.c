@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_haystacklcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:37:16 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/19 17:18:10 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:53:10 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	haystacklen(const char *s)
+static size_t	strlen(const char *s)
 {
 	size_t	count;
 
@@ -22,12 +22,12 @@ static size_t	haystacklen(const char *s)
 	return (count);
 }
 
-size_t	ft_haystacklcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	srcsize;
 	size_t	i;
 
-	srcsize = haystacklen(src);
+	srcsize = strlen(src);
 	if (!dstsize)
 		return (srcsize);
 	i = 0;
@@ -45,7 +45,7 @@ size_t	ft_haystacklcpy(char *dst, const char *src, size_t dstsize)
 // 	char src[] = "Hello";
 // 	char dst[4];
 // 	printf("Source is %s\n", src);
-// 	size_t result = ft_haystacklcpy(dst, src, 4);
+// 	size_t result = ft_strlcpy(dst, src, 4);
 // 	printf("Dest is %s\n", dst);
 // 	printf("Size of source is %zu\n", result);
 // 	return (0);

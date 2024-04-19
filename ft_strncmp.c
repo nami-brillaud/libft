@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_haystackncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 17:22:39 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/19 17:32:03 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:53:10 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_haystackncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
@@ -39,6 +39,6 @@ int	ft_haystackncmp(const char *s1, const char *s2, size_t n)
 // 	char abc[] = "abc";
 // 	char abb[] = "abb";
 // 	// char abc_same[] = "abc";
-// 	printf("empty/abc 3 %d\n", ft_haystackncmp(abb, abc, 3));
+// 	printf("empty/abc 3 %d\n", ft_strncmp(abb, abc, 3));
 // 	return(0);
 // }

@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 17:37:14 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/19 17:44:34 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:53:10 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-// #include <haystacking.h>
+// #include <string.h>
 // #include <stdio.h>
 // #include <stdlib.h>
 
@@ -52,14 +52,14 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // 	printf("real ver %s\n",memchr(s, 'l' + 256, 30));
 // 	return (0);
 // }
-// #include <haystacking.h>
+// #include <string.h>
 // #include <stdio.h>
 // int main(void)
 // {
 // 	const char test[50] = "Hello Dude 123";
 // 	char *ptr;
 // 	printf("%s\n", test);
-// 	ptr = ft_memchr(test, '5',  haystacklen(test));
+// 	ptr = ft_memchr(test, '5',  strlen(test));
 // 	if (ptr != NULL)
 // 	{
 // 		printf("Found 1 at position %ld\n", ptr - test);

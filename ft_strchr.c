@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_haystackchr.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 19:36:58 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/19 16:46:18 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:53:10 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_haystackchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	char	*s_ptr;
 	char	c_char;
@@ -45,14 +45,14 @@ char	*ft_haystackchr(const char *s, int c)
 // {
 // 	char here[50] = "here there is a needle";
 // 	char search = 'n';
-// 	printf("%s\n", ft_haystackchr(here, search));
+// 	printf("%s\n", ft_strchr(here, search));
 // 	return (0);
 // }
 
 // int main(void)
 // {
-// 	char *haystacking = NULL;
+// 	char *string = NULL;
 // 	int c = 'a';
-// 	ft_haystackchr(haystacking, c);
+// 	ft_strchr(string, c);
 // 	return (0);
 // }

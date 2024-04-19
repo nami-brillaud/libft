@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:09:53 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/19 17:44:34 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:53:10 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ void	*ft_memset(void *ptr, int x, size_t n)
 // #include <stdio.h>
 // int main() 
 // { 
-//     char haystack[50] = "GeeksForGeeks is for programming geeks."; 
-//     printf("\nBefore memset(): %s\n", haystack); 
-//     ft_memset(haystack + 13, '.', 8*sizeof(char)); 
-//     printf("After memset():  %s", haystack); 
+//     char str[50] = "GeeksForGeeks is for programming geeks."; 
+//     printf("\nBefore memset(): %s\n", str); 
+//     ft_memset(str + 13, '.', 8*sizeof(char)); 
+//     printf("After memset():  %s", str); 
 //     return 0; 
 // } 

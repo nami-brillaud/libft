@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_haystacklen.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:09:14 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/18 15:25:53 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:53:10 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_haystacklen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	count;
 
@@ -26,6 +26,6 @@ size_t	ft_haystacklen(const char *s)
 // int main(void)
 // {
 // 	char test[] = "Hello";
-// 	printf("%zu\n", ft_haystacklen(test));
+// 	printf("%zu\n", ft_strlen(test));
 // 	return (0);
 // }
