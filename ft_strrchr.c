@@ -1,51 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/18 19:36:58 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/19 16:46:18 by nfujisak         ###   ########.fr       */
+/*   Created: 2024/04/19 16:49:01 by nfujisak          #+#    #+#             */
+/*   Updated: 2024/04/19 17:11:12 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
+	char	*last_character;
 	char	*s_ptr;
 	char	c_char;
 
+	last_character = NULL;
 	s_ptr = (char *)s;
 	c_char = (char)c;
+	while (*s_ptr)
+	{
+		if (*s_ptr == c_char)
+			last_character = s_ptr;
+		s_ptr++;
+	}
 	if (c_char == '\0')
-	{
-		while (*s_ptr)
-		{
-			s_ptr++;
-		}
-		return (s_ptr);
-	}
+		return ((char *)s_ptr);
 	else
-	{
-		while (*s_ptr)
-		{
-			if (*s_ptr == c_char)
-				return (s_ptr);
-			else
-				s_ptr++;
-		}
-		return (NULL);
-	}
+		return (last_character);
 }
 
 // #include <stdio.h>
 // int main(void)
 // {
 // 	char here[50] = "here there is a needle";
-// 	char search = 'n';
-// 	printf("%s\n", ft_strchr(here, search));
+// 	char search = 'e';
+// 	printf("%s\n", ft_strrchr(here, search));
 // 	return (0);
 // }
 

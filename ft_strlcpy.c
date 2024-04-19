@@ -6,13 +6,13 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:37:16 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/18 17:21:28 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/19 16:50:59 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+static size_t	ft_strlen(const char *s)
 {
 	size_t	count;
 
