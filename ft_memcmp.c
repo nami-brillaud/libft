@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 16:02:24 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/17 17:37:49 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:44:34 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,39 +40,39 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 // #include <stdio.h>
 // int main()
 // {
-// 	// char str1[] = "Hey";
-// 	// char str2[] = "Heo";
-// 	// printf("%d\n", ft_memcmp(str1, str2, 3));
+// 	// char haystack1[] = "Hey";
+// 	// char haystack2[] = "Heo";
+// 	// printf("%d\n", ft_memcmp(haystack1, haystack2, 3));
 // // 10 (difference between y and o)
 
-// 	// char str1[] = "Hey";
-// 	// char str2[] = "Heyo";
-// 	// printf("%d\n", ft_memcmp(str1, str2, 3)); // returns 0 
+// 	// char haystack1[] = "Hey";
+// 	// char haystack2[] = "Heyo";
+// 	// printf("%d\n", ft_memcmp(haystack1, haystack2, 3)); // returns 0 
 
-// 	// char str1[] = "Hey";
-// 	// char str2[] = "Heyo";
-// 	// printf("%d\n", ft_memcmp(str1, str2, 4)); 
+// 	// char haystack1[] = "Hey";
+// 	// char haystack2[] = "Heyo";
+// 	// printf("%d\n", ft_memcmp(haystack1, haystack2, 4)); 
 // // returns -111 (difference between \0 (0) and o (111))
 
-// 	// char str1[] = "Hey";
-// 	// char str2[] = "Heyo";
-// 	// printf("%d\n", ft_memcmp(str1, str2, 5)); 
+// 	// char haystack1[] = "Hey";
+// 	// char haystack2[] = "Heyo";
+// 	// printf("%d\n", ft_memcmp(haystack1, haystack2, 5)); 
 // // with 1 byte over, still returns -111 
 // (difference between \0 (0) and o (111))
 
-// 	// char *str1 = NULL;
-// 	// char *str2 = NULL;
-// 	// printf("%d\n", ft_memcmp(str1, str2, 5)); //segfault
+// 	// char *haystack1 = NULL;
+// 	// char *haystack2 = NULL;
+// 	// printf("%d\n", ft_memcmp(haystack1, haystack2, 5)); //segfault
 // 	// return (0);
 
-// 	// char str1[] = "";
-// 	// char str2[] = "";
-// 	// printf("%d\n", ft_memcmp(str1, str2, 0));
+// 	// char haystack1[] = "";
+// 	// char haystack2[] = "";
+// 	// printf("%d\n", ft_memcmp(haystack1, haystack2, 0));
 //for byte 1 and 0, returns 0
 
-// 	// char str1[] = "";
-// 	// char str2[] = "";
-// 	// printf("%d\n", ft_memcmp(str1, str2, 5)); 
+// 	// char haystack1[] = "";
+// 	// char haystack2[] = "";
+// 	// printf("%d\n", ft_memcmp(haystack1, haystack2, 5)); 
 // 	// returns 208 - undefined behavior
 
 // 	// int arr1[] = {1, 2, 3, 4};

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_haystackncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_haystackncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 
@@ -39,6 +39,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 // 	char abc[] = "abc";
 // 	char abb[] = "abb";
 // 	// char abc_same[] = "abc";
-// 	printf("empty/abc 3 %d\n", ft_strncmp(abb, abc, 3));
+// 	printf("empty/abc 3 %d\n", ft_haystackncmp(abb, abc, 3));
 // 	return(0);
 // }

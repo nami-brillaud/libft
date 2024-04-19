@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_haystacklcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static size_t	strlen(const char *s)
+static size_t	haystacklen(const char *s)
 {
 	size_t	count;
 
@@ -22,12 +22,12 @@ static size_t	strlen(const char *s)
 	return (count);
 }
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_haystacklcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	srcsize;
 	size_t	i;
 
-	srcsize = strlen(src);
+	srcsize = haystacklen(src);
 	if (!dstsize)
 		return (srcsize);
 	i = 0;
@@ -45,7 +45,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 // 	char src[] = "Hello";
 // 	char dst[4];
 // 	printf("Source is %s\n", src);
-// 	size_t result = ft_strlcpy(dst, src, 4);
+// 	size_t result = ft_haystacklcpy(dst, src, 4);
 // 	printf("Dest is %s\n", dst);
 // 	printf("Size of source is %zu\n", result);
 // 	return (0);

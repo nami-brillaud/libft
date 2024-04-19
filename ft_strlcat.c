@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_haystacklcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static size_t	strlen(const char *s)
+static size_t	haystacklen(const char *s)
 {	
 	size_t	count;
 
@@ -22,7 +22,7 @@ static size_t	strlen(const char *s)
 	return (count);
 }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_haystacklcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	dstlen;
 	size_t	srclen;
@@ -30,9 +30,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 
 	if (dst == NULL)
-		return (strlen(src));
-	dstlen = strlen(dst);
-	srclen = strlen(src);
+		return (haystacklen(src));
+	dstlen = haystacklen(dst);
+	srclen = haystacklen(src);
 	if (dstlen >= dstsize)
 		return (dstsize + srclen);
 	maxcopy = dstsize - (dstlen + 1);
@@ -52,7 +52,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 // 	char src[2] = "";
 // 	char dst[50] = "";
 // 	printf("The source is %s, the dest is %s\n", src, dst);
-// 	size_t result = ft_strlcat(dst, src, 0);
+// 	size_t result = ft_haystacklcat(dst, src, 0);
 // 	printf("Now the source is %s, the dest is %s, the result is %zu\n", 
 // src, dst, result);
 // 	return (0);

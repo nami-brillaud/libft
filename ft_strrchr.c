@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_haystackrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_haystackrchr(const char *s, int c)
 {
 	char	*last_character;
 	char	*s_ptr;
@@ -38,14 +38,14 @@ char	*ft_strrchr(const char *s, int c)
 // {
 // 	char here[50] = "here there is a needle";
 // 	char search = 'e';
-// 	printf("%s\n", ft_strrchr(here, search));
+// 	printf("%s\n", ft_haystackrchr(here, search));
 // 	return (0);
 // }
 
 // int main(void)
 // {
-// 	char *string = NULL;
+// 	char *haystacking = NULL;
 // 	int c = 'a';
-// 	ft_strchr(string, c);
+// 	ft_haystackchr(haystacking, c);
 // 	return (0);
 // }

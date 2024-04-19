@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_haystacklen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_haystacklen(const char *s)
 {
 	size_t	count;
 
@@ -26,6 +26,6 @@ size_t	ft_strlen(const char *s)
 // int main(void)
 // {
 // 	char test[] = "Hello";
-// 	printf("%zu\n", ft_strlen(test));
+// 	printf("%zu\n", ft_haystacklen(test));
 // 	return (0);
 // }
