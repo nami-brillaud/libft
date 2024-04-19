@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:29:39 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/18 19:25:53 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/19 16:39:17 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	maxcopy;
 	size_t	i;
 
-	if (dst == (void *)0)
+	if (dst == NULL)
 		return (strlen(src));
 	dstlen = strlen(dst);
 	srclen = strlen(src);
