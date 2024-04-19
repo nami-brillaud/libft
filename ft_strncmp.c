@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 17:22:39 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/19 17:27:18 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:32:03 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	if (s1[i] != s2[i])
 	{
-		return (s1[i] - s2[i]);
+		return ((unsigned char) s1[i] - (unsigned char) s2[i]);
 	}
 	return (0);
 }
