@@ -6,13 +6,13 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 15:37:16 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/19 16:50:59 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/19 17:18:10 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_strlen(const char *s)
+static size_t	strlen(const char *s)
 {
 	size_t	count;
 
@@ -27,7 +27,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	srcsize;
 	size_t	i;
 
-	srcsize = ft_strlen(src);
+	srcsize = strlen(src);
 	if (!dstsize)
 		return (srcsize);
 	i = 0;
