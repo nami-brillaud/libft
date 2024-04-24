@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 18:00:14 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/24 15:32:23 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/24 16:11:14 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	overflow(long nb, int sign, char next_digit)
 			|| ((nb == LONG_MAX / 10) && (next_digit - '0' > LONG_MAX % 10)))
 			return ((int)(LONG_MAX));
 		if (nb < LONG_MIN / 10
-			|| ((nb == LONG_MIN / 10) && (next_digit - '0' < LONG_MIN % 10)))
+			|| ((nb == LONG_MIN / 10) && (next_digit - '0' > -LONG_MIN % 10)))
 			return ((int)(LONG_MIN));
 	}
 	return (0);
@@ -66,7 +66,7 @@ int	ft_atoi(const char *str)
 // #include <stdio.h>
 // int main(void)
 // {
-// 	char *mixed = "4294967295";;
-// 	printf("%d\n", ft_atoi(mixed));
+// 	char *mixed = "-9223372036854775809";
+// 	printf("%d\n", atoi(mixed));
 // 	return (0);
 // }
