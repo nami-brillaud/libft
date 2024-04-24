@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:47:35 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/24 15:52:20 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:53:59 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strdup(char *src)
 {
 	char	*ptr;
-	int		i;
+	size_t		i;
 
 	i = 0;
 	ptr = (char *)malloc(sizeof(char) * ft_strlen(src) + 1);
