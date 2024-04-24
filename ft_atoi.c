@@ -6,13 +6,13 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 18:00:14 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/24 15:30:39 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:32:23 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	whitespace(char c)
+static int	whitespace(char c)
 {
 	if (c == ' ' || c == '\0' || c == '\t'
 		|| c == '\n' || c == '\v' || c == '\f')
@@ -20,7 +20,7 @@ int	whitespace(char c)
 	return (0);
 }
 
-int	overflow(long nb, int sign, char next_digit)
+static int	overflow(long nb, int sign, char next_digit)
 {
 	if (sign == 1)
 	{
