@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/24 15:34:20 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/24 15:45:41 by nfujisak         ###   ########.fr       */
+/*   Created: 2024/04/26 14:50:13 by nfujisak          #+#    #+#             */
+/*   Updated: 2024/04/26 15:04:50 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,26 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
-	size_t	i;
 
+	if (size != 0 && count > ((size_t)SIZE_MAX / size))
+		return (NULL);
 	ptr = malloc(count * size);
 	if (ptr == NULL)
 		return (NULL);
-	i = 0;
 	ft_bzero(ptr, count * size);
 	return (ptr);
 }
 
 // #include <stdio.h>
+// int main (void) //overflow check
+// {
+//     void *ptr = ft_calloc((size_t)SIZE_MAX / 10 + (size_t)1, 10);
+//     if (ptr == NULL) 
+//         printf("Memory allocation failed for test 15,16 (overflow)\n");
+// 	else 
+//         printf("Memory alloc succeeded\n");
+// }
+
 // int main() {
 //     // Test Case 1: Allocating memory for an array of integers
 //     size_t count = 5;
