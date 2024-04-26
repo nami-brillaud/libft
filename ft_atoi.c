@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 18:00:14 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/26 14:31:33 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:19:10 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	whitespace(char c)
 {
-	if (c == ' ' || c == '\0' || c == '\t'
+	if (c == ' ' || c == '\r' || c == '\t'
 		|| c == '\n' || c == '\v' || c == '\f')
 		return (1);
 	return (0);
