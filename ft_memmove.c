@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:09:31 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/19 17:53:10 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:15:05 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d_ptr = (char *)dst;
 	s_ptr = (char *)src;
+	if (!dst && !src)
+		return (dst);
 	if (src < dst)
 	{
 		i = len;
