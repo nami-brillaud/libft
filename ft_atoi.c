@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 18:00:14 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/24 16:11:14 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/26 14:31:33 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,14 @@ static int	overflow(long nb, int sign, char next_digit)
 	if (sign == 1)
 	{
 		if (nb > LONG_MAX / 10
-			|| ((nb == LONG_MAX / 10) && (next_digit - '0' > LONG_MAX % 10)))
-			return ((int)(LONG_MAX));
-		if (nb < LONG_MIN / 10
-			|| ((nb == LONG_MIN / 10) && (next_digit - '0' > -LONG_MIN % 10)))
-			return ((int)(LONG_MIN));
+			|| (nb == LONG_MAX / 10 && next_digit - '0' >= LONG_MAX % 10))
+			return (1);
+	}
+	if (sign == -1)
+	{
+		if (nb > LONG_MIN / -10
+			|| (nb == LONG_MIN / -10 && next_digit - '0' >= LONG_MIN % 10 * -1))
+			return (-1);
 	}
 	return (0);
 }
@@ -44,16 +47,16 @@ int	ft_atoi(const char *str)
 	while (whitespace(*str))
 		str++;
 	if (*str == '-' || *str == '+')
-	{
 		if (*str++ == '-')
 			sign = -sign;
-	}
 	while (*str)
 	{
 		if (*str >= '0' && *str <= '9')
 		{
-			if (overflow(result, sign, *str) != 0)
-				return (overflow(result, sign, *str));
+			if (overflow(result, sign, *str) == -1)
+				return ((int)LONG_MIN);
+			if (overflow(result, sign, *str) == 1)
+				return ((int)LONG_MAX);
 			result = result * 10 + *str - '0';
 			str++;
 		}
@@ -67,6 +70,6 @@ int	ft_atoi(const char *str)
 // int main(void)
 // {
 // 	char *mixed = "-9223372036854775809";
-// 	printf("%d\n", atoi(mixed));
+// 	printf("%d\n", ft_atoi(mixed));
 // 	return (0);
 // }
