@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:09:04 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/18 16:03:53 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/26 15:13:15 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	dst_ptr = (char *)dst;
 	src_ptr = (char *)src;
+	if (!dst && !src)
+		return (dst);
 	while (n--)
 	{
 		*dst_ptr++ = *src_ptr++;
