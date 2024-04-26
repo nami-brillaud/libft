@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:29:39 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/26 16:11:58 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/26 16:52:43 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	const char	*src_ptr;
 	size_t		i;
 
-	if ((!dst || !src) & !dstsize)
+	if (dst == NULL)
+		return (strlen(src));
+	if ((!dst || !src) && !dstsize)
 		return (0);
 	src_ptr = src;
 	dstlen = 0;
