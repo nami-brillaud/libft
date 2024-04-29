@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 16:30:47 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/29 16:31:25 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/29 20:44:44 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*ptr;
 	size_t	start;
 	size_t	end;
-	size_t	i;
 
 	if (!s1 || !set)
 		return (NULL);
