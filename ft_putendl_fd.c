@@ -6,18 +6,18 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 16:37:26 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/29 16:37:47 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/29 20:46:37 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+void	ft_putendl_fd(char *s, int fd)
 {
 	if (s)
 	{
 		write(fd, s, ft_strlen(s));
-		write(fd, '\n', 1);
+		write(fd, "\n", 1);
 	}
 }
 
