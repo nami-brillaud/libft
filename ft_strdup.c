@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 15:47:35 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/24 15:53:59 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/29 20:42:21 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strdup(char *src)
 {
-	char	*ptr;
+	char		*ptr;
 	size_t		i;
 
 	i = 0;
