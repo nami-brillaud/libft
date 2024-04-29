@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:04:38 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/29 18:37:25 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/29 19:15:03 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
 
 #endif
