@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 16:41:40 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/29 17:15:56 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/29 17:52:40 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list	*list_itself;
-
 	if (!lst || !new)
 		return ;
 	new->next = *lst;
