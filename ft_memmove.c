@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/16 14:09:31 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/26 15:15:05 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/29 20:41:34 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		i = len;
 		while (i--)
-		{
 			d_ptr[i] = s_ptr[i];
-		}
 	}
 	else
 	{
