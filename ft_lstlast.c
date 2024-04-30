@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 17:49:48 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/29 18:21:21 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:47:34 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ t_list	*ft_lstlast(t_list *lst)
 // #include <stdio.h>
 // int main(void)
 // {
-// 	t_list	*test = ft_lstnew("Hey");
-// 	t_list	*new = ft_lstnew("Yay");
+// 	t_list	*test = ft_lstnew(ft_strdup("Hey"));
+// 	t_list	*new = ft_lstnew(ft_strdup("Yay"));
 // 	ft_lstadd_front(&test, new);
 // 	t_list	*last = ft_lstlast(new);
 // 	printf("The last node's content is %s\n", (char *)last->content);
