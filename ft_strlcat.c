@@ -6,21 +6,11 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/18 17:29:39 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/26 16:52:43 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:57:38 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	strlen(const char *s)
-{	
-	size_t	count;
-
-	count = 0;
-	while (*s++)
-		count++;
-	return (count);
-}
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -30,7 +20,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t		i;
 
 	if (dst == NULL)
-		return (strlen(src));
+		return (ft_strlen(src));
 	if ((!dst || !src) && !dstsize)
 		return (0);
 	src_ptr = src;
@@ -38,9 +28,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	while (dst[dstlen] && dstlen < dstsize)
 		dstlen++;
 	if (dstlen < dstsize)
-		totallen = dstlen + strlen(src_ptr);
+		totallen = dstlen + ft_strlen(src_ptr);
 	else
-		return (dstsize + strlen(src_ptr));
+		return (dstsize + ft_strlen(src_ptr));
 	i = dstlen;
 	while (i < dstsize - 1 && *src_ptr)
 	{
