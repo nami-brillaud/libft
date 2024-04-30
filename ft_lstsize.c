@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 17:16:34 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/29 17:47:01 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:48:38 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ int	ft_lstsize(t_list *lst)
 // #include <stdio.h>
 // int main(void)
 // {
-// 	t_list	*test = ft_lstnew("Hey");
-// 	t_list	*new = ft_lstnew("Yay");
+// 	t_list	*test = ft_lstnew(ft_strdup("Hey"));
+// 	t_list	*new = ft_lstnew(ft_strdup("Yay"));
 // 	ft_lstadd_front(&test, new);
 // 	printf("List count is %d\n", ft_lstsize(new));
 // 	for (t_list *tmp = new; tmp != NULL;)
