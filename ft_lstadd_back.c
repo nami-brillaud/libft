@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:23:26 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/30 19:37:29 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:44:29 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 // #include <stdio.h>
 // int main(void)
 // {
-// 	t_list	*test = ft_lstnew("Hey");
-// 	t_list	*back = ft_lstnew("end_node");
+// 	t_list	*test = ft_lstnew(ft_strdup("Hey"));
+// 	t_list	*back = ft_lstnew(ft_strdup("end_node"));
 // 	ft_lstadd_back(&test, back);
 // 	for (t_list *tmp = test; tmp != NULL;)
 // 	{
