@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 16:55:23 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/26 17:41:47 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:12:08 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substr;
 	size_t	slen;
 
+	if (!s)
+		return (NULL);
 	slen = ft_strlen(s);
 	if (start >= slen)
 		return (ft_strdup(""));
