@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:23:26 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/29 18:39:15 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/30 18:50:28 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last_node;
 
-	if (!lst || !new)
+	if (!lst ||!new)
 		return ;
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
 	last_node = ft_lstlast(*lst);
 	last_node->next = new;
 	new->next = NULL;

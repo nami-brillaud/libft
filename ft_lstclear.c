@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 19:37:55 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/29 20:18:05 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:02:13 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		free(current);
 		current = next;
 	}
-	current = NULL;
+	*lst = NULL;
 }
 
 // void	del_function(void *content)
@@ -35,12 +35,13 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 // 	if (content)
 // 		free(content);
 // }
-// 
+
 // #include <stdio.h>
+// #include <string.h>
 // int main(void)
 // {
-// 	t_list	*test = ft_lstnew("Hey");
-// 	t_list	*new = ft_lstnew("Yay");
+// 	t_list	*test = ft_lstnew(strdup("Hey"));
+// 	t_list	*new = ft_lstnew(strdup("Yay"));
 // 	ft_lstadd_front(&test, new);
 
 // 	printf("Before clearing:\n");
