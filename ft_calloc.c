@@ -6,23 +6,11 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 14:50:13 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/30 20:04:28 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/30 20:05:07 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-// void	ft_bzero(void *s, size_t n)
-// {
-// 	size_t	i;
-
-// 	i = 0;
-// 	while (i < n)
-// 	{
-// 		((char *)s)[i] = '\0';
-// 		i++;
-// 	}
-// }
 
 void	*ft_calloc(size_t count, size_t size)
 {
