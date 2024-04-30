@@ -6,7 +6,7 @@
 /*   By: nfujisak <nfujisak@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 16:41:40 by nfujisak          #+#    #+#             */
-/*   Updated: 2024/04/29 17:52:40 by nfujisak         ###   ########.fr       */
+/*   Updated: 2024/04/30 19:45:27 by nfujisak         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 // #include <stdio.h>
 // int main(void)
 // {
-// 	t_list	*test = ft_lstnew("Hey");
-// 	t_list	*new = ft_lstnew("Yay");
+// 	t_list	*test = ft_lstnew(ft_strdup("Hey"));
+// 	t_list	*new = ft_lstnew(ft_strdup("Yay"));
 // 	ft_lstadd_front(&test, new);
 // 	for (t_list *tmp = new; tmp != NULL;)
 // 	{
