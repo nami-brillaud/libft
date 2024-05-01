@@ -47,12 +47,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	return (new_list);
 }
 
-void	del_function(void *content)
-{
-	if (content)
-		free(content);
-}
-
+// void	del_function(void *content)
+// {
+// 	if (content)
+// 		free(content);
+// }
+//
 // #include "libft.h"
 // #include <stdio.h>
 
